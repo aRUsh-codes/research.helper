@@ -5,7 +5,7 @@ import os
 def setup_gemini(api_key):
     genai.configure(api_key=api_key)
 
-def get_gemini_response(prompt, temperature=0.7, model="models/gemini-1.5-pro-latest"):
+def get_gemini_response(prompt, temperature=0.7, model="models/gemini-1.5-flash-latest"):
     model = genai.GenerativeModel(model)
     response = model.generate_content(prompt)
     return response.text
